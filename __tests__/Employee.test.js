@@ -1,10 +1,21 @@
-const Employee = require('../lib/Employee');
+const EmployeeFixture = require('../fixtures/Employee.Fixture')
 
+describe('Employee', () => {
+  const employee = EmployeeFixture.employee()
 
-jest.mock('../lib/Employee');
+  it('getName should return correct name', () => {
+    expect(employee.getName()).toBe('Bob Dole')
+  })
 
-test('creates an employee object', () => {
-    const employee = new Employee('Bob Dole');
+  it('getId should return correct employee id', () => {
+    expect(employee.getId()).toBe(1234)
+  })
 
+  it('getEmail should return correct email address', () => {
+    expect(employee.getEmail()).toBe('bob.dole@dingis.com')
+  })
 
+  it('getRole should return correct role', () => {
+    expect(employee.getRole()).toBe('Employee')
+  })
 })
