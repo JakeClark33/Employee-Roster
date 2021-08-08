@@ -3,23 +3,27 @@ const EmployeeFixture = require('../fixtures/Employee.Fixture')
 describe('Engineer', () => {
   const engineer = EmployeeFixture.engineer()
 
-  it('getName should return correct name', () => {
+  it('should return correct name', () => {
     expect(engineer.getName()).toBe('Bob Dole')
+    expect(engineer.name).toBe('Bob Dole')
   })
 
-  it('getId should return correct mail engineer id', () => {
+  it('should return correct id', () => {
     expect(engineer.getId()).toBe(1234)
+    expect(engineer.id).toBe(1234)
   })
 
-  it('getEmail should return correct email address', () => {
+  it('should return correct email address', () => {
     expect(engineer.getEmail()).toBe('bob.dole@dingis.com')
+    expect(engineer.email).toBe('bob.dole@dingis.com')
   })
 
-  it('getGithub should return correct github user name', () => {
+  it('should return correct github user name', () => {
     expect(engineer.getEmail()).toBe('bob.dole@dingis.com')
+    expect(engineer.email).toBe('bob.dole@dingis.com')
   })
 
-  it('getRole should return correct role', () => {
+  it('should return correct role', () => {
     expect(engineer.getRole()).toBe('Engineer')
   })
 })
